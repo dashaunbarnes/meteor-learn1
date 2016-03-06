@@ -1,0 +1,23 @@
+<h1>MathMan</h1>
+
+<select [(ngModel)]="operation" name="operation" id="operation">
+<option value="+">Addition</option>
+<option value="*"  selected>Multiplication</option>
+<option value="-"  selected>Subtraction</option>
+<option value="/"  selected>division</option>
+
+</select>
+<br>
+
+What is {{number1}} {{operation}} {{number2}}? <br>
+
+<input type=text [(ngModel)]="poopAnswer"> <br>
+
+<button (click)="checkAnswer()">Submit</button>
+
+{{feedback}}
+<br><br>
+
+Answers correct: {{numberCorrect}}<br>
+Answers Incorrect: {{numberIncorrect}} <br>
+Total Questions {{numberCorrect + numberIncorrect }}
